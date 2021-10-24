@@ -34,6 +34,6 @@ long long get_fibonacci_huge_fast(long long n, long long m) {
 int main() {
     long long n, m;
     std::cin >> n >> m;
-    std::cout << get_fibonacci_huge_naive(n, m) << '\n';
+    // std::cout << get_fibonacci_huge_naive(n, m) << '\n';
     std::cout << get_fibonacci_huge_fast(n, m) << '\n';
 }
