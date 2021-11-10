@@ -24,7 +24,7 @@ double get_optimal_value(int capacity, vector<int> weights, vector<int> values) 
   std::sort(indice.begin(),indice.end(), [&](int i,int j){return valweight[i]<valweight[j];});
 
   // for (auto elem : indice){
-  //   std::cout << elem << " ";
+  //   std::cout << elem << " " << std::endl;
   // }
 
   while (capacity - weights.at(indice.back()) > 0){
@@ -33,9 +33,12 @@ double get_optimal_value(int capacity, vector<int> weights, vector<int> values) 
     indice.pop_back();
     // std::cout << capacity << " " << value << std::endl;
   }
-  
-  value += (capacity / weights.at(indice.back())) * values.at(indice.back());
 
+  // std::cout << "values.at(in.back()) " << values.at(indice.back()) << std::endl;
+  // std::cout << "capacity " << capacity << std::endl;
+  // std::cout << "weights.at(indice.back()) " << weights.at(indice.back()) << std::endl;
+  value += double(double(capacity) / double(weights.at(indice.back()))) * values.at(indice.back());
+  // std::cout << "value " << value << std::endl;
   return value;
 }
 

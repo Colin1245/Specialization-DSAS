@@ -10,13 +10,13 @@ int get_change(int m) {
     sum = sum + m / 10;
   }
   
-  else if (rem > 4){
+  if (rem > 4){
     rem = rem % 5;
     sum++;
   }
 
-  else if (rem > 0){
-    sum = sum + rem / 1;
+  if (rem > 0){
+    sum += rem / 1;
   }
   
   return sum;
